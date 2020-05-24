@@ -4,7 +4,7 @@
 ### -- Time: April 2019
 
 
-![SLAM Sketch](/AGV_ROS/markdown/slam.png)
+![SLAM Sketch](../AGV_ROS/markdown/slam.png)
 
 
 
