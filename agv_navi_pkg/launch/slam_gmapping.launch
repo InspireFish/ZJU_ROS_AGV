@@ -1,0 +1,14 @@
+<launch>
+    <!--1. 打开map server-->
+    <!--2. 打开串口通信-->
+    <!--3. 打开键盘操控-->
+    <!--4. 打开SLAM模块：slam_gmapping-->
+    <!--5. 打开激光雷达：发布/scan-->
+    <!--6. 打开agv_base：发布/odom-->
+    <!--<node name="map_server" pkg="map_server" type="map_server" args="$(find my_map_package)/my_map.pgm my_map_resolution"/>-->
+    <!--<node name="serial_trans" pkg="serial_trans" type="serial_trans" output="screen"/>-->
+    <!--<node name="keyboard_control_v2" pkg="keyboard_control" type="keyboard_control_v2" output="screen"/>-->
+    <include file="$(find rplidar_ros)/launch/view_rplidar.launch" />
+    <node pkg="agv_navi_pkg" name="agv_base" type="agv_base" output="screen"/>
+    <include file="$(find agv_navi_pkg)/param/slam_gmapping.xml" />
+</launch>

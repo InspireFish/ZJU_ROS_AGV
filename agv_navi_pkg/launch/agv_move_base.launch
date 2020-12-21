@@ -1,0 +1,21 @@
+<launch>
+    <!--1. 打开map server-->
+    <!--2. 打开串口通信-->
+    <!--3. 打开键盘操控-->
+    <!--4. 打开SLAM模块：slam_gmapping-->
+    <!--5. 打开激光雷达：发布/scan-->
+    <!--6. 打开agv_base模块：发布/odom-->
+    <!--7. 打开move_base导航控制模块-->
+    <!--8. 打开amcl定位模块-->
+
+    <!--map_sever需要在slam_gmapping步骤之后更改一下参数：my_map的名称-->
+    <arg name="map_arg" default="$(find agv_navi_pkg)/map/rawmap.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_arg)"/>
+    
+    <node name="serial_trans" pkg="serial_trans" type="serial_trans" output="screen"/>
+    <node name="agv_base" pkg="agv_navi_pkg" type="agv_base" output="screen"/>
+    <include file="$(find rplidar_ros)/launch/view_rplidar.launch" />
+    <include file="$(find agv_navi_pkg)/launch/amcl.launch"/>
+    <include file="$(find agv_navi_pkg)/param/agv_move_base.xml"/>
+
+</launch>

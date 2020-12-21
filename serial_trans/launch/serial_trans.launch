@@ -1,0 +1,4 @@
+<launch>
+    <node name="serial_trans" pkg="serial_trans" type="serial_trans" output="screen"/>
+    <node name="keyboard_control_v2" pkg="keyboard_control" type="keyboard_control_v2" output="screen"/>
+</launch>
