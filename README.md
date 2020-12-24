@@ -5,13 +5,13 @@
 
 - [AGV & ROS Navigation Stack](#agv--ros-navigation-stack)
   - [1. Overview](#1-overview)
-  - [2. Architecture &](#2-architecture-)
+  - [2. Hardware & Software](#2-hardware--software)
   - [3. Details](#3-details)
 
 ## 1. Overview
 ![SLAM_Sketch](https://raw.githubusercontent.com/InspireFish/ZJU_ROS_AGV/master/markdown/slam.png)
 
-## 2. Architecture & 
+## 2. Hardware & Software
 * Automated Guided Vehicle(AGV)
 * SLAMTEC inc. RPLIDAR A2 lidar (indoor, max range of 16m, 10Hz)
 * UART serial port, CP2102 module
