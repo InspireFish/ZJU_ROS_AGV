@@ -1,31 +1,25 @@
 # AGV & ROS Navigation Stack
-Author: Shimin Pan
+**Author**: Shimin Pan\
+**Place**: ZJU (Mechanical Engineering Dept.)\
+**Time**: April 2019
 
-Place: ZJU Mechanical Engineering
-
-Time: April 2019
-
-## __Table of contents__
 - [AGV & ROS Navigation Stack](#agv--ros-navigation-stack)
-  - [__Table of contents__](#table-of-contents)
-  - [__Description__](#description)
-  - [__How to deploy?__](#how-to-deploy)
-  - [__References__](#references)
-___
+  - [1. Overview](#1-overview)
+  - [2. Architecture &](#2-architecture-)
+  - [3. Details](#3-details)
 
-
-## __Description__
-
+## 1. Overview
 ![SLAM_Sketch](https://raw.githubusercontent.com/InspireFish/ZJU_ROS_AGV/master/markdown/slam.png)
-___
-## __How to deploy?__
 
-___
-## __References__
+## 2. Architecture & 
+* Automated Guided Vehicle(AGV)
+* SLAMTEC inc. RPLIDAR A2 lidar (indoor, max range of 16m, 10Hz)
+* UART serial port, CP2102 module
+* SLAM algorithm: Rao-Blackwellization Particle Filter (RBPF)
+* Augmented Monte Carlo sampling localization (in AMCL package)
+* Global path planning: Dijkstra path planning (in navfn package)
+* Local path planning: Dynamic Window Approach (DWA, in base_local_planner)
 
-___
-
-
-
-
-
+## 3. Details
+* The way to [deploy (Chinese version only)](怎样使用我的毕业设计.docx) ROS packages
+* The report about this [project (Chinese version only)](毕业论文_潘世民.docx)
